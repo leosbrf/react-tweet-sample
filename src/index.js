@@ -7,6 +7,8 @@ import { Provider } from 'react-redux'
 import reducer from './reducers'
 import middleware from './middleware'
 
+//disable in production or just use the logOnly extension
+//https://github.com/zalmoxisus/redux-devtools-extension/issues/289
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__  || compose
 const store = createStore(reducer, composeEnhancers(middleware))
 
